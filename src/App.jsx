@@ -96,7 +96,7 @@ function App() {
       <div className="p-6 md:p-10 max-w-6xl mx-auto mb-[100px] md:mb-10">
         <div className="text-center mb-10">
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-3">
-            Choose Your Perfect Skip
+            Choose Your Perfect Skip Size
           </h1>
           <p className="text-lg text-gray-600">
             Select the skip size that matches your needs

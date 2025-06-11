@@ -41,8 +41,8 @@ function App() {
     setSelectedSkip(skip);
   };
 
-  const handleBack = () => {
-    console.log("Back button clicked");
+  const handleCancel = () => {
+    setSelectedSkip(null);
   };
 
   const handleContinue = () => {
@@ -147,10 +147,10 @@ function App() {
             </div>
             <div className="flex gap-4">
               <button
-                onClick={handleBack}
+                onClick={handleCancel}
                 className="px-8 py-3 bg-gray-500 text-white rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 cursor-pointer"
               >
-                Back
+                Cancel
               </button>
               <button
                 onClick={handleContinue}

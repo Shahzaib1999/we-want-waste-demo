@@ -25,13 +25,13 @@ const SkipCard = ({ skip, isSelected, onSelect }) => {
         />
         {/* dummy img */}
         <div
-          className="w-36 h-20 bg-orange-500 rounded-lg relative shadow-lg"
+          className="w-36 h-20 bg-blue-400 rounded-lg relative shadow-lg"
           style={{
             transform: "perspective(100px) rotateX(15deg)",
             display: "none",
           }}
         >
-          <div className="absolute -top-2 left-2 right-2 h-5 bg-orange-600 rounded"></div>
+          <div className="absolute -top-2 left-2 right-2 h-5 bg-blue-500 rounded"></div>
           <div className="absolute inset-0 flex items-center justify-center text-white font-bold text-sm">
             {skip?.size}YD
           </div>
@@ -47,11 +47,22 @@ const SkipCard = ({ skip, isSelected, onSelect }) => {
           {skip?.size} Yard Skip
         </h3>
         <p
-          className={`text-sm mb-4 ${
+          className={`text-sm mb-2 ${
             isSelected ? "opacity-90" : "text-gray-600"
           }`}
         >
           {skip?.hire_period_days} day hire period
+        </p>
+        <p
+          className={`text-xs font-semibold mb-4 ${
+            skip?.allowed_on_road
+              ? "invisible"
+              : isSelected
+              ? "text-red-200"
+              : "text-red-500"
+          }`}
+        >
+          Not Allowed On The Road
         </p>
         <div className="flex items-center justify-between">
           <div
